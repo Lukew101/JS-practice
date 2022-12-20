@@ -1,0 +1,10 @@
+
+.play {
+    background: greenyellow;
+    color: black;
+    padding: 5px 20px;
+    border: 0px;
+    border-radius: 5px;
+    margin: 20px;
+    font-size: 1.5rem;
+}
