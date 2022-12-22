@@ -2,12 +2,12 @@ body {
     background: #313131;
     font-family: "Open Sans";
     text-align: center;
-    margin-top: 500px;
+    margin-top: 300px;
 }
 
 main {
     max-width: 1000px;
-    min-height: 300px;
+    min-height: 500px;
     margin: auto;
     background: #efefef;
 }
@@ -20,6 +20,11 @@ main {
     border-radius: 5px;
     margin: 20px;
     font-size: 1.5rem;
+    margin-top: 150px;
+}
+
+p {
+    font-size: 20px;
 }
 
 .game {
@@ -37,4 +42,16 @@ input[class="option"]{
 
 input[type="radio"]:checked + label {
     color: #840017;
+}
+
+.won {
+    color: green;
+}
+
+.lost {
+    color: red;
+}
+
+.tie {
+    color: black;
 }
