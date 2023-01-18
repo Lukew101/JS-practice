@@ -5,8 +5,8 @@ let allDecks = [];
 let dealerHand = [];
 let playerHand = [];
 
-const cardModel = document.createElement('div');
-cardModel.classList.add('card');
+const card_Model = document.createElement('div');
+card_Model.classList.add('card');
 
 const dealer = document.getElementById("dealer");
 const player = document.getElementById("player");
@@ -52,7 +52,22 @@ const selectRandomCard = ()=>{
     return card;
 };
 
+const dealHands = ()=>{
+    const dealerHand= [selectRandomCard(), selectRandomCard()];
+    dealerHand.forEach((card)=>{
+        const newCard = card_Model.cloneNode(true);
+        newCard.innerHTML = card;
+        (card[card.length - 1] === '♦' || card[card.length - 1] === '♥') && newCard.setAttribute('data-red', true);
+        dealer.append(newCard);
+    });
+    const playerHand= [selectRandomCard(), selectRandomCard()];
+    playerHand.forEach((card)=>{
+        const newCard = card_Model.cloneNode(true);
+        newCard.innerHTML = card;
+        (card[card.length - 1] === '♦' || card[card.length - 1] === '♥') && newCard.setAttribute('data-red', true);
+        player.append(newCard);
+    });
+};
+
 shuffleDecks(5);
-const randomCard = selectRandomCard();
-console.log(randomCard);
-console.log(allDecks);
+dealHands();
